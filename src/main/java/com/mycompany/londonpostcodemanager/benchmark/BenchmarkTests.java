@@ -19,9 +19,9 @@ public class BenchmarkTests {
         double heapTime = benchmark(() -> MinimumHeapTest.main(null), "MinimumHeapTest");
 
         System.out.println("\n--- Benchmark Results (Average over " + RUNS + " runs) ---");
-        System.out.printf("AvlTreeTest.main() average time: %.2f ns = %.9f s\n", avlTime, avlTime / 1_000_000_000.0);
-        System.out.printf("BstTest.main() average time: %.2f ns = %.9f s\n", bstTime, bstTime / 1_000_000_000.0);
-        System.out.printf("MinimumHeapTest.main() average time: %.2f ns = %.9f s\n", heapTime, heapTime / 1_000_000_000.0);
+        System.out.printf("AvlTreeTest.main() average time: %.2f ns = %.9f seconds\n", avlTime, avlTime / 1_000_000_000.0);
+        System.out.printf("BstTest.main() average time: %.2f ns = %.9f seconds\n", bstTime, bstTime / 1_000_000_000.0);
+        System.out.printf("MinimumHeapTest.main() average time: %.2f ns = %.9f seconds\n", heapTime, heapTime / 1_000_000_000.0);
     }
 
     private double benchmark(Runnable method, String methodName) {
